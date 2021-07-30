@@ -1,9 +1,8 @@
-import { parent1 } from "./parents/parent1"
-import { parent2 } from "./parents/parent2"
-
 const main = async () => {
+  const {parent1} = require('./parents/parent1')
   parent1()
   await new Promise(resolve => setTimeout(resolve, 3000))
+  const {parent2} = require('./parents/parent2')
   parent2()
 }
 
